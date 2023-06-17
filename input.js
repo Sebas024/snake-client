@@ -1,9 +1,10 @@
 
 
 
-// establishes a connection with the game server
+// // establishes a connection with the game server
 
-// setup interface to handle user input from stdin
+// // setup interface to handle user input from stdin
+
 
 const handleUserInput = function(key, connection) {
   if (key === 'w') {
@@ -38,7 +39,6 @@ const handleUserInput = function(key, connection) {
     // You would need to implement the code to send the message string to the server
   }
 };
-
 
 
 const setupInput = function(connection) {
