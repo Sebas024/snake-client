@@ -1,11 +1,4 @@
-
-
-
-// // establishes a connection with the game server
-
-// // setup interface to handle user input from stdin
-
-
+// Handles user input from stdin and sends corresponding commands to the game server
 const handleUserInput = function(key, connection) {
   if (key === 'w') {
     console.log('Move up');
@@ -40,31 +33,15 @@ const handleUserInput = function(key, connection) {
   }
 };
 
-
+// Sets up the input stream to handle user input and calls handleUserInput with the key and connection
 const setupInput = function(connection) {
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
   stdin.resume();
   stdin.on("data", (key) => handleUserInput(key, connection));
-
-
+  
   return stdin;
 };
 
-// rule:
-// register it as the "data" callback handler for stdin.
-// handleUserInput should check for the ctrl + c input and terminate the game
-// Call setupInput from within play.js.
-// const handleUserInput = function(key) {
-//   // your code here
-//   if (key === '\u0003') {
-//     // Check for Ctrl + C input (ASCII code 3) and terminate the game
-//     process.exit();
-//   }
-// };
-
-
-module.exports = {setupInput};
-
-
+module.exports = { setupInput };
