@@ -2,16 +2,12 @@
 const handleUserInput = function(key, connection) {
   if (key === 'w') {
     connection.write("Move: up");
-    // Perform the corresponding action for moving up
   } else if (key === 'a') {
     connection.write("Move: left");
-    // Perform the corresponding action for moving left
   } else if (key === 's') {
     connection.write("Move: down");
-    // Perform the corresponding action for moving down
   } else if (key === 'd') {
     connection.write("Move: right");
-    // Perform the corresponding action for moving right
   } else if (key === '\u0003') {
     console.log('User has left');
     // Check for Ctrl + C input (ASCII code 3) and terminate the game
