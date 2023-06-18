@@ -1,19 +1,15 @@
 // Handles user input from stdin and sends corresponding commands to the game server
 const handleUserInput = function(key, connection) {
   if (key === 'w') {
-    console.log('Move up');
     connection.write("Move: up");
     // Perform the corresponding action for moving up
   } else if (key === 'a') {
-    console.log('Move left');
     connection.write("Move: left");
     // Perform the corresponding action for moving left
   } else if (key === 's') {
-    console.log('Move down');
     connection.write("Move: down");
     // Perform the corresponding action for moving down
   } else if (key === 'd') {
-    console.log('Move right');
     connection.write("Move: right");
     // Perform the corresponding action for moving right
   } else if (key === '\u0003') {
