@@ -16,6 +16,10 @@ const connect = function() {
     conn.write('Name: Huggies'); // Send the string "Name: SNK" to the server
   });
 
+  conn.on("data", (data) => {
+    console.log("Data received", data);
+  });
+
   return conn;
 };
 

@@ -12,16 +12,10 @@ const handleUserInput = function(key, connection) {
     console.log('User has left');
     // Check for Ctrl + C input (ASCII code 3) and terminate the game
     process.exit();
-  } else if (key === 'm') {
-    const message = "Say: Hello, everyone!";
-    console.log("Sending a message:", message);
-    // Perform the action to send the message to the server
-    // You would need to implement the code to send the message string to the server
-  } else if (key === 'n') {
-    const message = "Say: How is everyone doing?";
-    console.log("Sending a message:", message);
-    // Perform the action to send another message to the server
-    // You would need to implement the code to send the message string to the server
+  } else if (key === '1') {
+    connection.write('Say: Hello, everyone!');
+  } else if (key === '2') {
+    connection.write('Say: How is everyone doing?');
   }
 };
 
