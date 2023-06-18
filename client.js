@@ -8,15 +8,15 @@ const connect = function() {
     port: PORT,
   });
   
-  conn.setEncoding("utf-8");
+  conn.setEncoding("utf8");
 
   // Notifys the user someone connected
   conn.on('connect', () => { // Event handler when the connection is established
     console.log('Successfully connected to game server'); // Log success message to console
-    conn.write('Name: SNK'); // Send the string "Name: SNK" to the server
+    conn.write('Name: Huggies'); // Send the string "Name: SNK" to the server
   });
 
-  return conn; 
+  return conn;
 };
 
 module.exports = { connect };
